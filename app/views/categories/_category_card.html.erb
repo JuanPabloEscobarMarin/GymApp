@@ -1,0 +1,6 @@
+<%= link_to category do %>
+    <div class="w-full">
+        <%= image_tag(category.image.first, class: "w-82 rounded-2xl overflow-hidden", loading: "lazy") if category.image.any? %>
+        <p class="text-lg font-bold">   <%= category.name %> </p>
+    </div>
+<% end %>

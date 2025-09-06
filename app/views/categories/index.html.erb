@@ -1,0 +1,24 @@
+<% content_for :title, "Categories" %>
+
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-md inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+      <div class="flex justify-between items-center py-3 ">
+          <h1 class="font-bold text-4xl">Categories</h1>
+      </div>
+
+  <div id="categories" class="max-w-6xl gap-8 grid md:grid-cols-4 mx-[28px] md:mx-auto">
+
+
+    <% if @categories.any? %>
+        <% @categories.each do |category| %>
+        <%= render "category_card", category: category %>
+     <% end %>
+
+    <% else %>
+         <p class="text-center my-10">No categories found.</p>
+    <% end %>
+  </div>
+</div>

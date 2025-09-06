@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
+  devise_for :models
+  resources :categories
+  resources :exercises
   get "home/index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -12,6 +16,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  resources :exercises
   get "home/prueba"
-  root "home#index"
+  root "categories#index"
 end
