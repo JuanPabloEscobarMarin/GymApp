@@ -1,5 +1,6 @@
 # Usuarios de prueba (Devise). Usa BCrypt vía ERB.
 # Requiere que 'bcrypt' esté disponible (lo está si tienes Devise).
+<% require 'devise' %>
 one:
   email: "juan@example.com"
   encrypted_password: <%= BCrypt::Password.create('s3cr3t123') %>
