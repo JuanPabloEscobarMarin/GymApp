@@ -1,7 +1,13 @@
-one: {}
-	email: testuser1@example.com
-	password_digest: <%= User.new.send(:password_digest, 'password123') %>
-#
-two: {}
-	email: testuser2@example.com
-	password_digest: <%= User.new.send(:password_digest, 'password123') %>
+# Usuarios de prueba (Devise). Usa BCrypt vía ERB.
+# Requiere que 'bcrypt' esté disponible (lo está si tienes Devise).
+one:
+  email: "juan@example.com"
+  encrypted_password: <%= BCrypt::Password.create('s3cr3t123') %>
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>
+
+two:
+  email: "maria@example.com"
+  encrypted_password: <%= BCrypt::Password.create('p4ssw0rd!') %>
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>

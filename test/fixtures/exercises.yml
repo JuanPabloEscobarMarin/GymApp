@@ -1,9 +1,11 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+push_up:
+  name: "Push-up"
+  url: "https://example.com/push-up"
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>
 
-one:
-  name: Exercise One
-  url: https://example.com/one
-
-two:
-  name: Exercise Two
-  url: https://example.com/two
+squat:
+  name: "Squat"
+  url: "https://example.com/squat"
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>

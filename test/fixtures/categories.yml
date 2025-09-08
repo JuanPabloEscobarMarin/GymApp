@@ -1,9 +1,11 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+first:
+  name: "Fuerza"
+  descriptio: "Ejercicios de fuerza máxima"
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>
 
-one:
-  name: MyString
-  descriptio: MyString
-
-two:
-  name: MyString
-  descriptio: MyString
+second:
+  name: "Resistencia"
+  descriptio: "Trabajo cardiovascular"
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>
