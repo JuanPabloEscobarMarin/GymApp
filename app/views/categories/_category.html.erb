@@ -1,0 +1,19 @@
+<div id="<%= dom_id category %>" class="w-full sm:w-auto my-5 space-y-5">
+  <div>
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= category.name %>
+  </div>
+  <div>
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= category.descriptio %>
+  </div>
+  <div>
+    <strong class="block font-medium mb-1">Image:</strong>
+    <% if category.image.attached? %>
+          <% category.image.each do |image| %>
+          <%= link_to image.filename, image, class: "text-gray-700 underline hover:no-underline" if category.image.attached? %>
+    <% end %>
+  <% end %>
+  </div>
+</div>
+
